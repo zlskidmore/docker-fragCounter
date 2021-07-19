@@ -70,6 +70,7 @@ RUN R --vanilla -e 'install.packages(c("devtools", "BiocManager"), repos="http:/
 RUN R --vanilla -e 'BiocManager::install(c("BiocGenerics","GenomicRanges","rtracklayer","Biostrings","DNAcopy","GenomeInfoDb","IRanges","Rsamtools","rtracklayer"))'
 RUN R --vanilla -e 'install.packages(c("optparse","data.table","testhat"), repos = "http://cran.us.r-project.org")'
 RUN R --vanilla -e 'devtools::install_github("mskilab/fragCounter")'
+RUN R --vanilla -e 'BiocManager::install(c("rtracklayer"))'
 
 # set some environment/path vars
 ENV PATH="${PATH}:/usr/local/lib/R/library/fragCounter/extdata/"
