@@ -67,7 +67,7 @@ RUN make install
 
 # install R packages
 RUN R --vanilla -e 'install.packages(c("devtools", "BiocManager"), repos="http://cran.us.r-project.org")'
-RUN R --vanilla -e 'BiocManager::install(c("BiocGenerics","GenomicRanges","rtracklayer","Biostrings","DNAcopy","GenomeInfoDb","IRanges","Rsamtools"))'
+RUN R --vanilla -e 'BiocManager::install(c("BiocGenerics","GenomicRanges","rtracklayer","Biostrings","DNAcopy","GenomeInfoDb","IRanges","Rsamtools","rtracklayer"))'
 RUN R --vanilla -e 'install.packages(c("optparse","data.table","testhat"), repos = "http://cran.us.r-project.org")'
 RUN R --vanilla -e 'devtools::install_github("mskilab/fragCounter")'
 
